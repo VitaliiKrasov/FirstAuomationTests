@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-/**
+/*
  * use Xpath
  */
 public class сompareMacBookVsIphone3Mozila {
