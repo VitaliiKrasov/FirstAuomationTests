@@ -38,13 +38,12 @@ public class сompareMacBookAndIphone3 {
         driver.findElement(By.xpath("//td//*[contains(text(), 'MacBook')]/../../following-sibling::td//*[contains(text(), 'iPhone 3')]"));
 
         driver.findElement(By.xpath("//td//a[@class='btn btn-danger btn-block']/../following-sibling::td//a[@class='btn btn-danger btn-block']")).click();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//a[@class='btn btn-danger btn-block']")).click();
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
         driver.findElement(By.xpath("//div[@class='pull-right']/a[contains(@href, 'route=common/home')]"));
-
     }
 
     @AfterClass
