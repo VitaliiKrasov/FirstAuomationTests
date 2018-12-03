@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class exchangeRate {
+public class ExchangeRate {
     public static void main(String[] args) {
         String property = System.getProperty("user.dir") + "/driver/chromedriver";
         System.setProperty("webdriver.chrome.driver", property);

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Address Book Entries, add, edit, delete, etc.
  */
-public class addressBookEntries {
+public class AddressBookEntries {
     private WebDriver driver;
 
     @BeforeClass
