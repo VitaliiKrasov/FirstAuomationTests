@@ -143,7 +143,6 @@ public class addressBookEntries {
         driver.findElement(By.id("input-password")).clear();
         driver.findElement(By.id("input-password")).sendKeys(PASSWORD);
         driver.findElement(By.cssSelector("input.btn.btn-primary[type='submit']")).click();
-//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @AfterMethod
