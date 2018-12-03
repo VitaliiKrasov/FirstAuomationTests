@@ -1,8 +1,8 @@
-package com.example.tests;
+package com.soft;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,14 +12,14 @@ import java.util.concurrent.TimeUnit;
 /*
  * use Xpath
  */
-public class CompareMacBookVsIphone3Mozila {
+public class CompareMacBookVsIphone3Chrome {
     private WebDriver driver;
 
     @BeforeClass
     public void setUp() {
-        String property = System.getProperty("user.dir") + "/driver/geckodriver";
-        System.setProperty("webdriver.gecko.driver", property);
-        driver = new FirefoxDriver();
+        String property = System.getProperty("user.dir") + "/driver/chromedriver";
+        System.setProperty("webdriver.chrome.driver", property);
+        driver = new ChromeDriver();
     }
 
     @Test
@@ -31,7 +31,9 @@ public class CompareMacBookVsIphone3Mozila {
         driver.findElement(By.xpath("//div[@class='caption']/*/*[contains(text(), 'iPhone 3')]/../../following-sibling::div/button[@data-original-title='Compare this Product']")).click();
 
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.findElement(By.xpath("//div[@class='alert alert-success']/a[contains(@href,'product/compare')]")).click();
+//        driver.findElement(By.xpath("//div[@class='alert alert-success']/a[contains(@href,'product/compare')]")).click();
+//        driver.findElement(By.cssSelector("a[href='http://taqc-opencart.epizy.com/index.php?route=product/compare']")).click();
+        driver.get("http://taqc-opencart.epizy.com/index.php?route=product/compare");
 
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.findElement(By.xpath("//td//*[contains(text(), 'MacBook')]/../../following-sibling::td//*[contains(text(), 'iPhone 3')]"));

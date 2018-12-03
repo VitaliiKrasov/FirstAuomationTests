@@ -1,14 +1,19 @@
-package com.example.main;
+package com.soft;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ExchangeRate {
     public static void main(String[] args) {
         String property = System.getProperty("user.dir") + "/driver/chromedriver";
         System.setProperty("webdriver.chrome.driver", property);
-        WebDriver driver = new ChromeDriver();
+
+        ChromeOptions options = new ChromeOptions();
+        options.setHeadless(true);
+
+        WebDriver driver = new ChromeDriver(options);
 
         try {
             driver.get("https://bank.gov.ua/control/uk/curmetal/detail/currency?period=daily");
